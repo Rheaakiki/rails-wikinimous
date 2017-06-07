@@ -4,11 +4,22 @@
     <title>RailsWikinimous</title>
     <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+ <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+
   </head>
 
   <body>
+  <nav style="background-color: #f8f8f8; padding: 30px; border-color: #e7e7e7; position: relative">
+  <div style="position: absolute; left: 20px; bottom: 6px; font-size: 20px" class="color-change">
+    <p>Rhea's Wikipedia</p>
+  </div>
+  <div style="position: absolute; right: 20px; bottom: 18px; font-size: 18px" class="color-change">
+   <%= link_to "Create new article", new_article_path %>
+   </div>
+  </nav>
     <%= yield %>
   </body>
 </html>
